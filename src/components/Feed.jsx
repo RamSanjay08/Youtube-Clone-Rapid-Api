@@ -5,8 +5,6 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Sidebar, Videos } from "./";
 
 const Feed = () => {
-
-
   const [selectedCategory, setSelectedCategory] = useState('New')
   const [ videos, setVideos] = useState([]);
 
@@ -21,7 +19,7 @@ const Feed = () => {
         sx={{
           height: { xs: "auto", md: "92vh" },
           borderRight: "1px solid #3d3d3d",
-          px: { xs: 0, md: 2 }, backgroundColor:"black"}}>
+          px: { xs: 0, md: 2 }, backgroundColor:"#040D12"}}>
             <Sidebar
              selectedCategory={selectedCategory}
              setSelectedCategory={setSelectedCategory}
@@ -38,7 +36,7 @@ const Feed = () => {
           height: '90vh', flex: 2}}>
             <Typography varient="h4"
             fontWeight="bold" md={2} sx={{ color: 'white'}}>
-               {selectedCategory}<span style={{ color: ' #F31503'}}>videos</span>
+               {selectedCategory}<span style={{ color: ' #F31503'}}> Videos</span>
             </Typography>
             <Videos videos={videos} />
           </Box>
